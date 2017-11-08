@@ -17,7 +17,16 @@ $(document).ready(function(){
 $('.nav-lg>li').mouseenter(function(){
 
 //alert("The paragraph is now hidden");
+$('.light-box').show();
 $('.main-menu').slideDown();
+
+});
+
+$('.light-box').mouseenter(function(){
+
+//alert("The paragraph is now hidden");
+$('.light-box').hide();
+$('.main-menu').slideUp();
 
 });
 
@@ -48,6 +57,8 @@ $('.main-menu').slideDown();
 <section>利害關係人</section>
 <section>專區網站</section>
 </div>
+
+<div class="light-box"></div>
 
 <header></header>
 
