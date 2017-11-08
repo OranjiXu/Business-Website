@@ -1,0 +1,122 @@
+/*---GLOBAL---*/
+:root {
+	--color1: #369;
+	--color2: #d9444a;
+	--color3: #94a437;
+	--color4:#6D7476;
+	--color5:#CCCCCC;
+	--color6:#4CAF50;
+}
+
+/*---LAYOUT---*/
+nav{
+	position:relative;
+	width:100%;
+	height:75px;
+	background:var(--color1);
+}
+.nav-lg{
+	position:relative;
+	height:100%;
+	width:auto;
+	float:right;
+}
+.nav-lg>li{
+	position:relative;
+	height:100%;
+	float:right;
+}
+.main-menu{
+	position:fixed;
+	width:100%;
+	height:400px;	
+	background:var(--color6);
+	display:none;
+	opacity:0.7;
+	z-index:10;
+}
+.main-menu>section{
+	height:400px;
+}
+header{
+	position:relative;
+	width:100%;
+	height:415px;
+	background:var(--color4);
+}
+.title{
+	position:relative;
+	width:100%;
+	height:140px;
+	background:var(--color5);
+}
+section{
+	position:relative;
+	width:100%;
+}
+section>ul{
+	position:relative;
+	width:100%;
+}
+section>ul>li{
+	position:relative;
+	height:280px;
+	float:left;	
+}
+section>ul>li:nth-child(odd){
+	background:var(--color2);
+}
+
+.news>li{
+	width:25%;
+}
+.product>li{
+	width:50%;
+}
+.tech>li{
+	width:25%;
+}
+.csr>li{
+	width:calc(100%/3);
+}
+.clear{
+	clear:both;
+}
+.sub-menu{
+	position:relative;
+	width:100%;
+}
+.sub-menu>div{
+	position:relative;
+	float:left;
+	width:calc(100%/6);
+}
+@media screen and (max-width:768px){
+	section>ul>li{
+	position:relative;
+	height:280px;
+	float:none;
+	width:100%;
+	}
+	.news>li{
+		width:100%;
+	}
+	.product>li{
+		width:100%;
+	}
+	.tech>li{
+		width:100%;
+	}
+	.csr>li{
+		width:100%;
+	}
+	.sub-menu>div{
+		float:none;
+	}
+	
+}
+/*---HEADER---*/
+/*---NAV---*/
+/*---CONTENT---*/
+/*---SIDEBAR---*/
+/*---FOOTER---*/
