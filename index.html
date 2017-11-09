@@ -134,7 +134,7 @@ $(".light-box").css("display","none");
 
 <div class="light-box"></div>
 
-<header></header>
+<header class="animated zoomInDown"></header>
 
 
 <div class="title">
@@ -143,14 +143,14 @@ $(".light-box").css("display","none");
 </div>
 <section>
 <ul class="news">
-	<li>
+	<li class="wow fadeInRight">
 		<div><span class="tit">最新消息</span></div>
 		<div style="margin-top:30px;">
 		<ul class="text"><div class="date">11/8</div><div>企業10月份盈餘表...</div></ul>
 		<ul class="text"><div class="date">10/31</div><div>企業於萬聖節舉行扮鬼慈善會....</div></ul>
 		</div>
 	</li>
-	<li>
+	<li class="wow rotateInDownLeft">
 		<div><span class="tit">企業快訊</span></div>
 		<div style="margin-top:30px;">
 		<ul class="corporation-news">
@@ -160,11 +160,11 @@ $(".light-box").css("display","none");
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>基金會活動全紀錄</li>
 		</ul>
 	</li>
-	<li>
-		<span class="tit">活動剪影</span>
+	<li class="wow fadeInLeft">
+		<span class="tit ">活動剪影</span>
 		<div><p>2016.12.24</p> 聖誕晚會</div>
 	</li>
-	<li>
+	<li class="wow fadeInLeft">
 		<span class="tit">財務資訊</span>
 		<div style="margin-top:30px;">
 		<ul class="finance-news">
@@ -185,8 +185,8 @@ $(".light-box").css("display","none");
 </div>
 <section>
 	<ul class="product">
-	<li><div><span class="tit">產品應用</span></div></li>
-	<li><div><span class="tit">未來趨勢</span></div></li>
+	<li class="wow rotateInUpRight"><div><span class="tit">產品應用</span></div></li>
+	<li class="wow rotateInUpLeft"><div><span class="tit">未來趨勢</span></div></li>
 	<div class="clear"></div>
 </ul>
 </section>
@@ -198,7 +198,7 @@ $(".light-box").css("display","none");
 </div>
 <section>
 <ul class="tech">
-	<li><span class="tit">產品應用</span>
+	<li class="wow rollIn"><span class="tit">產品應用</span>
 		<ul class="finance-news" style="margin-top: 30px;">
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>開發與研討</li>
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>微電腦技術</li>
@@ -206,12 +206,12 @@ $(".light-box").css("display","none");
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>海外座談會</li>
 		</ul>
 	</li>
-	<li>
+	<li class="wow lightSpeedIn">
 		<p>有對情侶到懸崖邊看風景，女生裝娃娃音對男生說:你願意為我而死嗎？男生鐵青臉回:一定要嗎？女生眼神堅定，男生:那好吧。然後挖耳朵後塞到女生嘴裡，女生:你幹嘛?男:妳不是要我餵妳耳屎嗎
 		</p>
 	</li>
-	<li></li>
-	<li><iframe width="100%" height="100%" src="https://www.youtube.com/embed/o-E21IKQqC0" frameborder="0" allowfullscreen></iframe></li>
+	<li class="wow slideInLeft"></li>
+	<li class="wow slideInRight"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/o-E21IKQqC0" frameborder="0" allowfullscreen></iframe></li>
 	<div class="clear"></div>
 </ul>
 </section>
@@ -222,16 +222,16 @@ $(".light-box").css("display","none");
 </div>
 <section>
 <ul class="csr">
-	<li>
+	<li class="wow bounceIn">
 		<div class="circle-pic" style="background-image:url('img/life1.jpg'); "></div>
 		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>使用環保綠色能源</div>
 		<div>定期檢驗、拒絕汙染，善盡企業倫理責任。</div>
 	</li>
-	<li><div class="circle-pic" style="background-image:url('img/life2.jpg'); "></div>
+	<li class="wow bounceIn"><div class="circle-pic" style="background-image:url('img/life2.jpg'); "></div>
 		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>企業社會責任</div>
 		<div>為善盡企業社會責任,我們致力於...。</div>
 	</li>
-	<li><div class="circle-pic" style="background-image:url('img/life3.jpg'); "></div>
+	<li class="wow bounceIn"><div class="circle-pic" style="background-image:url('img/life3.jpg'); "></div>
 		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>教育基金會</div>
 		<div>提供相關領域人才教育及培育，關懷生態保育，提昇人文精神...</div>
 	</li>
@@ -319,5 +319,10 @@ $(".light-box").css("display","none");
 </div>
 </footer>
 
+
+<script src="js/wow.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 </body>
 </html>
