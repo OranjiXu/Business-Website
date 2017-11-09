@@ -10,8 +10,10 @@
 <script src="js/jquery.js" ></script>
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/earlyaccess/cwtexyen.css' rel='stylesheet' type='text/css'>
 <script>
+new WOW().init();
 $(document).ready(function(){
 
 //當螢幕寬度改變則自動重新整理網頁
@@ -89,14 +91,22 @@ $(".light-box").css("display","none");
 
 }
 
-
 });
 </script>
 </head>
 <body>
 
 <div class="logo-bar">
-	<div class="logo">logo</div>
+	<div class="logo">
+		<img height="75px" src="img/icon.png">
+	</div>
+	<form>
+	<select name="YourLocation">
+　	<option value="Taipei">繁體中文</option>
+　	<option value="Taoyuan">簡體中文</option>
+　	<option value="Hsinchu">English</option>
+	</select>
+	</form>
 </div>
 
 <nav>
@@ -125,7 +135,7 @@ $(".light-box").css("display","none");
 
 <div class="light-box"></div>
 
-<header></header>
+<header class="wow bounce"></header>
 
 
 <div class="title">
@@ -137,8 +147,8 @@ $(".light-box").css("display","none");
 	<li>
 		<div><span class="tit">最新消息</span></div>
 		<div style="margin-top:30px;">
-		<ul class="text"><li class="date">11/8</li><div>企業10月份盈餘表...</div></ul>
-		<ul class="text"><li class="date">10/31</li><div>企業於萬聖節舉行扮鬼慈善會....</div></ul>
+		<ul class="text"><div class="date">11/8</div><div>企業10月份盈餘表...</div></ul>
+		<ul class="text"><div class="date">10/31</div><div>企業於萬聖節舉行扮鬼慈善會....</div></ul>
 		</div>
 	</li>
 	<li>
@@ -156,9 +166,9 @@ $(".light-box").css("display","none");
 		<div><p>2016.12.24</p> 聖誕晚會</div>
 	</li>
 	<li>
-		<div><span class="tit">財務資訊</span></div>
+		<span class="tit">財務資訊</span>
 		<div style="margin-top:30px;">
-		<ul class="corporation-news">
+		<ul class="finance-news">
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>第三季財報</li>
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>9月盈餘表</li>
 			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>第二季財報</li>
@@ -189,21 +199,43 @@ $(".light-box").css("display","none");
 </div>
 <section>
 <ul class="tech">
-	<li><span class="tit">產品應用</span></li>
+	<li><span class="tit wow bounce">產品應用</span>
+		<ul class="finance-news" style="margin-top: 30px;">
+			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>開發與研討</li>
+			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>微電腦技術</li>
+			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>生物科學研究</li>
+			<li><i class="fa fa-dot-circle-o" aria-hidden="true"></i>海外座談會</li>
+		</ul>
+	</li>
+	<li>
+		<p>有對情侶到懸崖邊看風景，女生裝娃娃音對男生說:你願意為我而死嗎？男生鐵青臉回:一定要嗎？女生眼神堅定，男生:那好吧。然後挖耳朵後塞到女生嘴裡，女生:你幹嘛?男:妳不是要我餵妳耳屎嗎
+		</p>
+	</li>
 	<li></li>
-	<li></li>
-	<li></li>
+	<li><iframe width="100%" height="100%" src="https://www.youtube.com/embed/o-E21IKQqC0" frameborder="0" allowfullscreen></iframe></li>
 	<div class="clear"></div>
 </ul>
 </section>
 
-
-<div class="title"></div>
+<div class="title">
+<p>Touch you life</p>
+<p>貼近生活</p>
+</div>
 <section>
 <ul class="csr">
-	<li></li>
-	<li></li>
-	<li></li>
+	<li>
+		<div class="circle-pic" style="background-image:url('img/life1.jpg'); "></div>
+		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>使用環保綠色能源</div>
+		<div>定期檢驗、拒絕汙染，善盡企業倫理責任。</div>
+	</li>
+	<li><div class="circle-pic" style="background-image:url('img/life2.jpg'); "></div>
+		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>企業社會責任</div>
+		<div>為善盡企業社會責任,我們致力於...。</div>
+	</li>
+	<li><div class="circle-pic" style="background-image:url('img/life3.jpg'); "></div>
+		<div class="csr-tit"><i class="fa fa-arrow-right" aria-hidden="true"></i>教育基金會</div>
+		<div>提供相關領域人才教育及培育，關懷生態保育，提昇人文精神...</div>
+	</li>
 	<div class="clear"></div>
 </ul>
 </section>
@@ -211,7 +243,7 @@ $(".light-box").css("display","none");
 
 <div class="sub-menu">
 	<div>
-	<p>關於公司</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>關於公司</p>
 		<ul class="sub-menu-item">
 			<li>認識中鋼</li>
 			<li>企業公民</li>
@@ -223,7 +255,7 @@ $(".light-box").css("display","none");
 	</div>
 
 	<div>
-	<p>客戶服務</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>客戶服務</p>
 		<ul class="sub-menu-item">
 			<li>客戶服務</li>
 			<li>產品製造</li>
@@ -235,7 +267,7 @@ $(".light-box").css("display","none");
 	</div>
 	
 	<div>
-	<p>投資人關係</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>投資人關係</p>
 		<ul class="sub-menu-item">
 			<li>股東服務</li>
 			<li>公司治理</li>
@@ -244,7 +276,7 @@ $(".light-box").css("display","none");
 	</div>
 	
 	<div>
-	<p>利害關係人</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>利害關係人</p>
 		<ul class="sub-menu-item">
 			<li>利害關係人溝通</li>
 			<li>重大性議題</li>
@@ -254,7 +286,7 @@ $(".light-box").css("display","none");
 	</div>
 	
 	<div>
-	<p>下載專區</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>下載專區</p>
 		<ul class="sub-menu-item">
 			<li>CSR報告書</li>
 			<li>財務報告</li>
@@ -265,7 +297,7 @@ $(".light-box").css("display","none");
 	</div>
 	
 	<div>
-	<p>專區網站</p>
+	<p><i class="fa fa-angle-double-right" aria-hidden="true"></i>專區網站</p>
 		<ul class="sub-menu-item">
 			<li>資訊網站</li>
 			<li>生活網</li>
@@ -274,7 +306,6 @@ $(".light-box").css("display","none");
 			<li></li>
 		</ul>
 	</div>
-	
 </div>
 <div class="clear"></div>
 <footer>
