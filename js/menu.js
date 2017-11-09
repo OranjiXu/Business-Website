@@ -65,20 +65,20 @@ $("#sub-menu-control").click(function(){
 
 }
 else {
-$(".sub-menu").animate({right:'-100%'});
+$(".sub-menu").css("right","-100%");
 $(".sub-menu").css({"flex-direction":"column","display":"flex"});
 $(".light-box2").css("display","none");
-$('.light-box').fadeOut();
-$('.main-menu').slideUp();
+$('.light-box').css("display","none");
+$('.main-menu').css("display","none");
 
 $("#sub-menu-control").click(function(){
-$(".sub-menu").animate({right:'0px'});
+//$(".sub-menu").css("right","0px");
 $(".light-box2").css("display","block");
 $('body').css("overflow","hidden");
 });
 
 $("[href],.light-box2").click(function(){
-$(".sub-menu").animate({right:'-100%'});
+$(".sub-menu").css("right","-100%");
 $(".light-box2").css("display","none");
 $('body').css("overflow","auto");
 });
