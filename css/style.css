@@ -135,7 +135,17 @@ section>ul>li{
 	position:relative;
 	width:calc(100%/6);
 }
+.light-box2{
+		display: none;
+		background:black;
+		display:none;
+		opacity:0.7;
+		z-index:9;
+}
 @media screen and (max-width:768px){
+	.light-box,.main-menu{
+		display: none;
+	}
 	.nav-lg{
 		display: none;
 	}
@@ -143,7 +153,7 @@ section>ul>li{
 		margin-right: 15px;
 		display: block;
 	}
-	.main-menu ,.light-box{
+	.main-menu ,.light-box2{
 		display: none;
 	}
 	section>ul>li{
@@ -173,9 +183,9 @@ section>ul>li{
 		right: -100%;
 		overflow: auto;
 		z-index: 99;
-		padding: 0px 15px;		
+		padding: 0px 15px;
 	}
-	.light-box{
+	.light-box2{
 		position: fixed;
 		left: 0px;
 		top: 0px;
