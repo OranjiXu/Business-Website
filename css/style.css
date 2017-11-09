@@ -201,6 +201,32 @@ section>ul>li{
 	}
 	
 }
+/*BACKGROUND*/
+.news>li:nth-child(1){
+	background-image: url(../img/1.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.news>li:nth-child(2){
+	background-image: url(../img/2.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.news>li:nth-child(4){
+	background-image: url(../img/3.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.tech>li:nth-child(1){
+	background-image: url(../img/4.jpg);
+	background-position: center;
+	background-size: cover;
+}
+.tech>li:nth-child(2){
+	background-image: url(../img/5.jpg);
+	background-position: center;
+	background-size: cover;
+}
 /*---HEADER---*/
 header{
 	background-image: url(../img/header.jpg);
@@ -264,6 +290,11 @@ header{
 	position: relative;
 	margin: 5px 0px;
 	align-items:center;
+	transition: all 0.2s ease-in-out;
+}
+.text:hover{
+	transform: scale(1.05,1.05);
+	cursor: pointer;
 }
 .date{
 	width: 80px;
@@ -278,12 +309,15 @@ header{
 	height: 100%;
 	width: auto;
 	box-sizing: border-box;
-}
-.corporation-news{
-
+	padding-left: 10px; 
 }
 .corporation-news>li{
 	margin: 5px 0px;
+	transition: all 0.2s ease-in-out;
+	padding: 0px 15px ;
+}
+.corporation-news>li:hover{
+	transform: scale(1.05,1.05);
 }
 .corporation-news>li>i{
 	color: #005AAD;
@@ -314,6 +348,7 @@ header{
 }
 .finance-news>li{
 	margin: 5px 0px;
+	padding: 0px 15px ;
 }
 .finance-news>li>i{
 	color: #FF6100;
