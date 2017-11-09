@@ -1,10 +1,5 @@
 var x; 
 $(document).ready(function(){
-	$('.light-box').fadeOut();
-	$('.main-menu').slideUp();
-	$(".sub-menu").animate({right:'-100%'});
-	$(".light-box2").css("display","none");
-	$('body').css("overflow","auto");
 /*
 //當螢幕寬度改變則自動重新整理網頁
 
@@ -33,7 +28,8 @@ $(window).resize(function(){
 x=$(window).width();//取得視窗寬度
 
 if (x >768 ) {//執行項目
-$(".sub-menu").animate({right:'-100%'});
+$(".sub-menu").animate({right:'0px'});
+$(".sub-menu").css({"flex-direction":"row","display":"flex"});
 $(".light-box2").css("display","none");
 $('body').css("overflow","auto");
 //location.reload();
@@ -69,12 +65,12 @@ $("#sub-menu-control").click(function(){
 
 }
 else {
-
+$(".sub-menu").animate({right:'-100%'});
+$(".sub-menu").css({"flex-direction":"column","display":"flex"});
 $('.light-box').fadeOut();
 $('.main-menu').slideUp();
 
 $("#sub-menu-control").click(function(){
-$(".sub-menu").css("display","block");
 $(".sub-menu").animate({right:'0px'});
 $(".light-box2").css("display","block");
 $('body').css("overflow","hidden");

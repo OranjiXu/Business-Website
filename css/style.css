@@ -130,6 +130,7 @@ section>ul>li{
 	position:relative;
 	width:100%;
 	display: flex;
+	flex-direction:row;
 }
 .sub-menu>div{
 	position:relative;
@@ -184,6 +185,7 @@ section>ul>li{
 		overflow: auto;
 		z-index: 99;
 		padding: 0px 15px;
+		flex-direction:column;
 	}
 	.light-box2{
 		position: fixed;
@@ -195,7 +197,6 @@ section>ul>li{
 
 	}
 	.sub-menu>div{
-		float:none;
 		width: 100%;
 	}
 	
