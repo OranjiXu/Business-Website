@@ -67,6 +67,7 @@ $("#sub-menu-control").click(function(){
 else {
 $(".sub-menu").animate({right:'-100%'});
 $(".sub-menu").css({"flex-direction":"column","display":"flex"});
+$(".light-box2").css("display","none");
 $('.light-box').fadeOut();
 $('.main-menu').slideUp();
 
