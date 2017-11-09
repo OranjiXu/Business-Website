@@ -1,6 +1,10 @@
 var x; 
 $(document).ready(function(){
-
+	$('.light-box').fadeOut();
+	$('.main-menu').slideUp();
+	$(".sub-menu").animate({right:'-100%'});
+	$(".light-box2").css("display","none");
+	$('body').css("overflow","auto");
 /*
 //當螢幕寬度改變則自動重新整理網頁
 
