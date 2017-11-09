@@ -9,6 +9,7 @@
 }
 i{margin: 0px 3px;}
 body{font-family: Arial,'微軟正黑體';}
+ul{overflow: hidden;}
 /*---LAYOUT---*/
 .logo-bar{
 	position: relative;
