@@ -29,18 +29,13 @@ $('.main-menu').slideDown(300,function(){
 
 });*/
 $(window).resize(function(){
-	$('.light-box').fadeOut();
-	$('.main-menu').slideUp();
-	$(".sub-menu").animate({right:'-100%'});
-	$(".light-box2").css("display","none");
-	$('body').css("overflow","auto");
-	//reset
 
-
-	x=$(window).width();//取得視窗寬度
+x=$(window).width();//取得視窗寬度
 
 if (x >768 ) {//執行項目
-
+$(".sub-menu").animate({right:'-100%'});
+$(".light-box2").css("display","none");
+$('body').css("overflow","auto");
 //location.reload();
 $('.light-box').mouseenter(function(){
 
@@ -74,6 +69,10 @@ $("#sub-menu-control").click(function(){
 
 }
 else {
+
+$('.light-box').fadeOut();
+$('.main-menu').slideUp();
+
 $("#sub-menu-control").click(function(){
 $(".sub-menu").css("display","block");
 $(".sub-menu").animate({right:'0px'});
