@@ -1,18 +1,30 @@
 /*---GLOBAL---*/
 :root {
-	--color1: #369;
-	--color2: #d9444a;
-	--color3: #94a437;
+	--color1:#369;
+	--color2:#d9444a;
+	--color3:#94a437;
 	--color4:#6D7476;
 	--color5:#CCCCCC;
 	--color6:#4CAF50;
 }
 
 /*---LAYOUT---*/
+.logo-bar{
+	position: relative;
+	width: 100%;
+	height: 25px;
+}
+.logo{
+	position: absolute;
+	height: 75px;
+	width: 150px;
+	background: var(--color3);
+	z-index: 3;
+}
 nav{
 	position:relative;
 	width:100%;
-	height:75px;
+	height:50px;
 	background:var(--color1);
 }
 .nav-lg{
@@ -20,11 +32,19 @@ nav{
 	height:100%;
 	width:auto;
 	float:right;
+	line-height: 50px;
 }
 .nav-lg>li{
 	position:relative;
 	height:100%;
 	float:right;
+}
+#sub-menu-control{
+	color: white;
+	position: relative;
+	float: right;
+	line-height: 50px;
+	display: none;
 }
 .main-menu{
 	position:absolute;
@@ -39,6 +59,7 @@ nav{
 }
 .main-menu>section{
 	height:400px;
+	display: none;
 }
 .light-box{
 	top:475px;
@@ -104,6 +125,15 @@ section>ul>li:nth-child(odd){
 	width:calc(100%/6);
 }
 @media screen and (max-width:768px){
+	.nav-lg{
+		display: none;
+	}
+	#sub-menu-control{
+		display: block;
+	}
+	.main-menu ,.light-box{
+		display: none;
+	}
 	section>ul>li{
 	position:relative;
 	height:280px;
@@ -122,8 +152,28 @@ section>ul>li:nth-child(odd){
 	.csr>li{
 		width:100%;
 	}
+	.sub-menu{
+		background: red;
+		position: fixed;
+		width: 40%;
+		height: 100%;
+		top: 0px;
+		right: -100%;
+		overflow: auto;
+		z-index: 99;
+	}
+	.light-box{
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		display: none;
+
+	}
 	.sub-menu>div{
 		float:none;
+		width: 100%;
 	}
 	
 }

@@ -14,48 +14,113 @@
 <script>
 $(document).ready(function(){
 
+//當螢幕寬度改變則自動重新整理網頁
+
+  var $window = $(window);
+  function checkWidth() {
+      var windowsize = $window.width();//取得螢幕寬度
+      location.reload(); //重新整理刷新網頁
+  }
+  var resizeId;
+  $(window).resize(function() {
+    clearTimeout(resizeId);
+    resizeId = setTimeout(checkWidth, 100); //當停止螢幕拖拉才執行
+  });
+
+/*
 $('.nav-lg>li').mouseenter(function(){
-
-//alert("The paragraph is now hidden");
-$('.light-box').show();
-$('.main-menu').slideDown();
-
+$('.main-menu').show();
+//alert("The paragraph is now hidden"); 
+$('.main-menu').slideDown(300,function(){
+	$('.light-box').fadeIn(200);
 });
 
+});*/
+
+$(window).width()//取得視窗寬度
+
+if ($(window).width() >768 ) {//執行項目
+
+//location.reload();
 $('.light-box').mouseenter(function(){
 
 //alert("The paragraph is now hidden");
-$('.light-box').hide();
+$('.light-box').fadeOut();
 $('.main-menu').slideUp();
 
 });
+
+
+$(".nav-lg-item").each(function (i) {
+    $(this).mouseenter(function () {
+        $('.main-menu>section').hide();
+        $('#list'+(i+1)).show();
+        //$('.main-menu').show();
+		//alert("The paragraph is now hidden"); 
+		$('.main-menu').slideDown(300,function(){
+		$('.light-box').fadeIn(200);
+		});
+
+
+    });
+});
+
+$("#sub-menu-control").click(function(){
+	$("aside").css("display","block");
+	$("aside").animate({left:'0px'});
+	//$("#darklight").css("display","block");
+});
+
+
+}
+else {
+//location.reload();
+$("#sub-menu-control").click(function(){
+$(".sub-menu").css("display","block");
+$(".sub-menu").animate({right:'0px'});
+$(".light-box").css("display","block");
+});
+
+$("[href],.light-box").click(function(){
+$(".sub-menu").animate({right:'-100%'});
+$(".light-box").css("display","none");
+});
+
+
+}
+
 
 });
 </script>
 </head>
 <body>
 
-<div>LOGO</div>
+<div class="logo-bar">
+	<div class="logo">logo</div>
+</div>
 
 <nav>
 <ul class="nav-lg">
-<li>關於企業</li>
-<li>客戶服務</li>
-<li>投資人關係</li>
-<li>企業社會責任</li>
-<li>利害關係人</li>
-<li>專區網站</li>
+<li class="nav-lg-item">專區網站</li>
+<li class="nav-lg-item">利害關係人</li>
+<li class="nav-lg-item">企業社會責任</li>
+<li class="nav-lg-item">投資人關係</li>
+<li class="nav-lg-item">客戶服務</li>
+<li class="nav-lg-item">關於企業</li>
 <div class="clear"></div>
 </ul>
+<div id="sub-menu-control">
+	<i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+</div>
 </nav>
 
 <div class="main-menu">
-<section>關於企業</section>
-<section>客戶服務</section>
-<section>投資人關係</section>
-<section>企業社會責任</section>
-<section>利害關係人</section>
-<section>專區網站</section>
+<section id="list1">專區網站</section>
+<section id="list2">利害關係人</section>
+<section id="list3">企業社會責任</section>
+<section id="list4">投資人關係</section>
+<section id="list5">客戶服務</section>
+<section id="list6">關於企業</section>
 </div>
 
 <div class="light-box"></div>
