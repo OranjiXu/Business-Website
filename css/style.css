@@ -14,10 +14,11 @@ ul{overflow: hidden;}
 .logo-bar{
 	position: relative;
 	width: 100%;
-	height: 25px;
+	height: 25px;	
 }
 .logo{
 	position: absolute;
+	padding-top: 5px;
 	height: 75px;
 	width: 150px;
 	z-index: 3;
@@ -204,33 +205,33 @@ section>ul>li{
 }
 /*BACKGROUND*/
 .news>li:nth-child(1){
-	background-image: url(../img/1.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/1.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .news>li:nth-child(2){
-	background-image: url(../img/2.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/2.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .news>li:nth-child(4){
-	background-image: url(../img/3.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/3.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .tech>li:nth-child(1){
-	background-image: url(../img/4.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/4.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .tech>li:nth-child(2){
-	background-image: url(../img/5.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/5.jpg);
 	background-position: center;
 	background-size: cover;
 }
 /*---HEADER---*/
 header{
-	background-image: url(../img/header.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/header.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-bottom: 15px #FF6100 solid;
@@ -238,7 +239,7 @@ header{
 }
 /*---NAV---*/
 /*.logo{
-	background-image: url(../img/icon.png);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/icon.png);
 	background-repeat: no-repeat;
 	background-size:auto 75px;
 }*/
@@ -324,7 +325,7 @@ header{
 	color: #005AAD;
 }
 .news>li:nth-child(3){
-	background-image: url(../img/news.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/news.jpg);
 }
 .news>li:nth-child(3)>.tit{
 	color: white;
@@ -365,11 +366,11 @@ header{
 	border-bottom: 5px #FF8A47 solid;
 }
 .product>li:nth-child(1){
-	background-image: url(../img/pro1.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/pro1.jpg);
 	background-position: center center;
 }
 .product>li:nth-child(2){
-	background-image: url(../img/pro2.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/pro2.jpg);
 	background-position: center center;
 }
 /*---Technology---*/
@@ -387,7 +388,7 @@ header{
 	align-items: center;
 }
 .tech>li:nth-child(3){
-	background-image: url(../img/tech.jpg);
+	background-image: url(http://w12.loxa.edu.tw/q30409/img/tech.jpg);
 	background-position: center;
 }
 /*---CSR---*/
